@@ -71,6 +71,6 @@ model Snippet {
     content     String
     language    String
     tags        String[]
-    visibility  String
+    isPrivate   Boolean
     url         String   @unique
 }
