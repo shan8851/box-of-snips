@@ -1,5 +1,6 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
+import { Header } from "~/components/header";
 import { api } from "~/utils/api";
 
 export default function Home() {
@@ -10,19 +11,15 @@ export default function Home() {
         <meta name="description" content="Snippets" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <div className="hero min-h-screen bg-base-200">
-          <div className="hero-content text-center">
-            <div className="max-w-md">
-              <h1 className="text-5xl font-bold">Box Of Snips</h1>
-              <p className="py-6">
-                Snippets on demand
-              </p>
-              <button className="btn-primary btn">Get Started</button>
-            </div>
-          </div>
+      <main>
+        <Header />
+        <div className="mx-5 mt-5 grid grid-cols-4 gap-2">
+          <div className="px-2">side</div>
+          <div className="col-span-3">main</div>
         </div>
       </main>
     </>
   );
 }
+
+
